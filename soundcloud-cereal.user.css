@@ -1,0 +1,1317 @@
+@-moz-document domain("soundcloud.com") {
+/*MAIN CODE */
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */  
+}
+.modal::-webkit-scrollbar {
+    width: 0px;
+}
+.sc-classic::-webkit-scrollbar-track {background-color: #F5F5F5;}
+
+.sc-classic::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+.sc-classic::-webkit-scrollbar-thumb {
+	background-color: rgba(33,41,46,1);
+}
+
+body {
+    background-color: white !important;
+    font-family: 'airbnb cereal app medium', sans-serif !important;
+    transition: opacity 1s ease-in;
+}
+/* .l-container.l-content {background-color: rgba(250,250,250,1);} */
+
+/* toolbar */
+
+.m-light .headerMenu__link, .m-light .headerMenu__link {transition: all 0.3s ease;}
+.m-light .headerMenu__link:focus, .m-light .headerMenu__link:hover {
+    background-color: rgba(40, 47, 51, 0.3);
+    transition: all 0.3s ease;
+}
+.header__navMenu>li {
+    list-style: none;
+}
+
+.header__link.header__goUpsell {
+    color: #333;
+    transition: all 2s ease;
+    width: 0;
+    position: fixed;
+    bottom: 300%;
+}
+.header__navMenu>li>a {
+	border: none;
+    margin-left: 20px;
+}
+.sc-text-light {
+    color:black;
+}
+.g-dark input[type=password], .g-dark input[type=search], .g-dark input[type=text], .g-dark select, .g-dark textarea {background-color: #21292e;}
+.g-dark input[type=search] {border-bottom: 1px solid transparent}
+.g-dark input[type=search]:focus {border-bottom: 1px solid white;}
+
+.headerSearch__submit:hover {filter:invert(90%);transition: all 0.3s ease;}
+
+.notificationIcon:hover {background-color:rgba(31, 31, 31, 1);transition: all 0.3s ease;}
+
+.notificationBadge__main {
+    color: black;
+}
+
+.sc-classic .dropbar__content {
+    background-color: rgba(40,47,51,0.6);
+    border-right: 2px solid rgba(40,47,51,1);
+    border-bottom: 2px solid rgba(40,47,51,1);
+    border-bottom-right-radius: 5px;
+    backdrop-filter: blur(5px);
+    width: 600px;
+    color: #ccc;
+}
+
+/* remove width  */
+.l-container {width: auto;} 
+
+/* fonts */
+
+.sc-font-light {
+	font-family: 'airbnb cereal app light', sans-serif !important;
+    font-weight: 600;
+}
+
+.sc-font {
+	font-family: 'airbnb cereal app book', sans-serif !important;
+    letter-spacing: 1px;
+}
+.sc-type-large {
+    font-family: 'airbnb cereal app book', sans-serif !important;
+    font-weight: bolder;
+}
+.header {
+    font-family: 'airbnb cereal app medium', sans-serif;
+}
+
+.sc-type-h1, .sc-type-h2, .sc-type-h3, .sc-type-h4, .sc-type-h5, .sc-type-h6, h1, h2, h3, h4, h5, h6 {
+	font-family: 'airbnb cereal app medium', sans-serif !important;
+}
+/* buttons */
+
+.sc-button-group>.sc-button, .sc-button-toolbar>.sc-button {margin-right: 15px;}
+.sc-button-medium.sc-button-icon:not(.sc-button-stretch-icon), .sc-button-medium.sc-button-responsive:not(.sc-button-stretch-icon) {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-family: 'Arial Nova', sans-serif; 
+    border: 1px solid !important;
+    border-color: rgba(0,0,0,0) !important;
+    font-size: 18px;
+    height: 30px;
+    
+    transition: all 0.4s ease-out;
+    
+    margin-right: 20px;
+    
+    /* v2 */
+    
+    border-radius: 20px;
+    
+}
+.sc-button-group>.sc-button, .sc-button-toolbar>.sc-button {margin-right: 15px;}
+.sc-button-medium.sc-button-icon:not(.sc-button-stretch-icon), .sc-button-medium.sc-button-responsive:not(.sc-button-stretch-icon):hover {
+	border-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(170,170,170,0.2) !important;
+    transition: all 0.2s ease-in;
+}
+
+.sc-border-light-bottom {border: none;}
+
+.sc-button-follow {background-color: rgba(239, 239, 239, 0.7); color: black;}
+
+.activityBadge__icon {filter:invert(100%);}
+
+/* player */
+
+.playControls__bg, .playControls__inner {
+    border-top: none;
+    
+}
+.skipControl__previous:hover {
+    
+    transition: all 0.2s ease;
+}
+
+.l-container.l-fullwidth {
+	width: auto;
+    padding: 0 30px;
+}
+
+.volume.expanded .volume__sliderWrapper {
+    background-color: rgba(242,242,242,0.7);
+    backdrop-filter: blur(3px);
+    border: none;
+}
+.volume__sliderProgress {width: 5px;}
+.volume__sliderBackground {width: 5px;}
+.volume__sliderHandle {left: 1.5px;}
+
+/* general song page */ 
+
+.playableTile__mainHeading {font-size: 16px;}
+.sc-classic .playableTile__mainHeading {font-size: 15px;}
+.usersList {
+    width: 250px;
+    margin-left: 20px;
+    overflow:visible;
+}
+
+.backgroundGradient__buffer {
+    opacity: 0.7;
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, 
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.backgroundGradient {
+    opacity: 1;
+ 	background-color: #333 !important; 
+    background: linear-gradient(60deg, rgba(33,41,46,1) 62%, rgba(255,255,255,0.6) 100%);
+}
+
+.fullHero__artwork {
+    filter: drop-shadow(0 0 2rem #333);
+    animation: var(--soundcloud-anime-reverse);
+}
+.playButton.m-stretch:active, .playButton.m-stretch:focus, .playButton.m-stretch:hover {
+    background-color: rgba(31, 31, 31, 0.5);
+    border-color: transparent;
+}
+.tileGallery__sliderButton:hover {
+    background-color: rgba(33,41,46,0.3);
+    border: 1px solid rgba(33,41,46,1) !important;
+    color: white !important;
+}
+.artistShortcutsGallery .tileGallery__sliderButton {
+    padding: 15px;
+}
+.tileGallery__sliderButton:focus {
+    border: 1px solid rgba(33,41,46,1) !important;
+}
+.tileGallery__sliderButton:after {
+    border-color: rgba(33,41,46,1) !important;
+}
+.tileGallery__sliderButton {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.6 );
+    border: 1px solid rgba(33,41,46,1);
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+/* USER BADGES */
+.userBadge {
+    transform: scale(1.1);
+    padding-top: 30px;
+    font-size: 20px;
+    border-radius: 0 !important;
+
+}
+.userInfoBar__buttons .sc-button-follow:before {
+    filter:invert(100%);
+}
+.listenArtistInfo .userBadge .sc-button-follow::before {
+    filter:invert(100%);
+    transform: scale(1.25);
+}
+.userBadge .sc-button-cta:focus {
+    background: none;
+    color: black;
+}
+
+.userBadge .sc-button-follow:hover {background-color: rgba(33,41,46,0.2);color:black;}
+.userBadge .sc-button-follow {
+    border-radius: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    height: 35px;
+    width: 100%;
+    border: 1px solid darkgray;
+    border-radius: 20px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+.sc-button-small.sc-button-follow:before {
+    margin-left: 2px;
+}
+.listenArtistInfo .userBadge__username {
+    font-size: 16px;
+}
+.userBadge__meta .sc-ministats-small {
+    font-size: 14px !important;
+/*     color: black !important; */
+    font-weight: bold;
+}
+
+.sc-button-small.sc-button-cta.sc-button-follow:before {
+    transform: scale(1.25);
+    left: 10px;
+}
+
+
+.playButton.m-stretch {
+    transition: all 0.3s ease-in;
+    background-color: rgba(31, 31, 31, 0.3) !important;
+    border: 2px solid transparent !important; 
+}
+.playButton.m-stretch:hover {
+    transition: all 0.2s ease-out;
+    background-color: rgba(31, 31, 31, 0.7) !important;
+    border-color: white !important;
+    /* filter: grayscale(1); */
+}
+
+/* comment */
+.commentForm.m-large .commentForm__input {
+    height: 50px !important;
+    font-size: 16px;
+}
+
+.commentForm.m-large .commentForm__wrapper {
+    height: 55px;
+    border: none;
+    background-color: white;
+}
+
+.sc-classic .commentForm.m-large .commentForm__inputWrapper {
+    bottom: 7px;
+}
+
+
+.sc-classic .commentForm.m-small .commentForm__input, .sc-classic .commentForm.m-small .commentForm__inputWrapper {
+    font-size: 15px;
+    height: 45px;
+}
+.sc-classic .commentForm__wrapper {
+    background: none !important;
+    height: 45px !important;
+    border: none;
+}
+
+.playControls__inner, .playControls__bg {border: none;}
+
+.playbackTimeline__progressBackground {background-color: rgba(31, 31, 31, 1);}
+
+.commentItem {font-size: 14px;}
+
+/* ARTICLE - TRY PRODUCT */
+
+.dashbox__wrapper {display: none;}
+
+/* INPUT */
+
+.sc-input {
+    border-radius: 0;
+    border: 1px solid rgba(40, 47, 51, 0.6);
+    font-family: 'airbnb cereal app medium', sans-serif !important;
+}
+
+.sc-button-dropdown.sc-button-dropdown-plain:not(.sc-button-disabled):not(:disabled) {
+    border: 1px solid rgba(40, 47, 51, 0.6); 
+}
+
+.commentForm.m-large .commentForm__avatar {top: 5px;}
+
+/* RANDOM / UNSORTED */
+
+.sc-button {font-family: 'airbnb cereal app medium', interstate, sans-serif !important;}
+.sc-button-group .sc-button:hover {
+    border-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(170,170,170,0.2) !important;
+    transition: all 0.2s ease;
+}
+.sc-button-group .sc-button{
+    background-color: rgba(255,255,255,0.2);
+    border-color: rgba(0,0,0,0.15) !important;
+    font-family: 'airbnb cereal app medium', sans-serif !important;
+    font-size: 14px;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+
+.g-tabs {font-family: inherit;}
+
+.listenEngagement__footer {
+    min-height: 45px;
+}
+
+.soundTitle.streamContext .soundTitle__title {
+    font-family: 'inter', sans-serif;
+    letter-spacing: 0.6px;
+    font-size: 18px;
+}
+
+.soundTitle__usernameHero {
+	font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.g-dark-bg{
+	background-color: rgba(17, 17, 17, 0.6);
+    font-family:'Corbel', sans-serif;
+}
+.gritter-item {
+	background-color: rgba(17, 17, 17, 0.6);
+	font-family:'Arial Nova', sans-serif;
+}
+.profileMenu__link {
+    padding: 10px;
+    text-align: right;
+}
+.profileMenu__profile:after {
+    text-align: right;
+}
+.profileMenu__list {
+    background-color: rgba(17, 17, 17, 0.6);
+    font-family:'Arial Nova', sans-serif;
+    font-size: 15px;
+    transition: all 1s ease;
+}
+
+.profileMenu__link:hover {
+    transition: all 0.5s ease;
+    background: rgba(17, 17, 17, 0.4) !important;
+}
+.profileMenu__link {transition: all 0.5s ease;}
+.profileMenu__link:after {top: auto;}
+.profileMenu__list:not(:last-child) {border: none;}
+
+.dropdownContent__header {border-bottom: none;}
+.dropdownContent__main {border-bottom: none;}
+
+.notifications {
+    overflow: visible;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dropdownMenu .g-z-index-header-menu {
+    margin: 0;width: 436px;
+    left: 50px;
+}
+.g-dark .sc-button:not(.sc-button-cta) {border-color: white;}
+.dropdownMenu {font-size: 14px;}
+.header__userNavUsernameButton {transition: all 0.5s ease;}
+.header__userNavUsernameButton:hover {background-color: rgba(17, 17, 17, 0.6); transition: all 0.5s ease;}
+
+.playbackSoundBadge__titleLink, .playbackSoundBadge__titleLink:visited {
+	color: black;
+    font-size: 11px;
+    font-weight: bolder;
+    font-family: 'arial nova', sans-serif;
+    letter-spacing: 0.8px;
+}
+.audibleTile__usernameHeading {font-size: 14px;}
+.image__lightOutline .image__full {box-shadow: none;}
+.sc-button-follow {background-color: rgba(0,0,0,0)}
+
+.profileMenu {
+    width: 139px !important;
+    transition: all 1s ease;
+    animation: d;
+}
+.headerMenu {background-color: rgba(0, 0, 0, 0.6 );}
+
+.headerMenu.m-light {
+    background-color: rgba(255, 255, 255, 0.6 );
+    backdrop-filter: blur(5px);
+    color: white !important;
+}
+
+.playableTile[data-actions=hover] .playableTile__actions, .playableTile[data-actions=never] .playableTile__actions, .playableTile[data-description=hover] .playableTile__description, .playableTile[data-description=never] .playableTile__description, .playableTile[data-playButton=hover] .playableTile__playButton, .playableTile[data-playButton=never] .playableTile__playButton {transition: all 0.3s ease;}
+
+/* ADD PLAYLIST REDESIGN 28-08-2021 */
+
+    /* BACKGROUND */
+.modal.modalWhiteout {
+    background-color: rgba(40, 47, 51, 0.9) !important;
+    backdrop-filter: blur(5px);
+}
+.modal__content {
+    background-color: rgba(255,255,255, 1) !important;
+
+}
+.g-modal-section {
+    background-color: rgba(255,255,255, 1) !important;
+}
+
+    /* CONTENT */
+.addToPlaylistItem__content h4 {
+    font-family: 'Arial Nova' !important;
+    font-size:16px;
+    
+}
+.addToPlaylistButton {border-left: 1px solid white;}
+.addToPlaylistItem {padding-left:20px !important;}
+.addToPlaylistItem__content span {
+    font-family: 'Arial Nova' !important;
+    font-size: 14px;
+}
+.addToPlaylistList__item {padding: 15px 0 !important;}
+.sc-border-light-top {border: none;}
+
+.addToPlaylistList__item {transform:scale(1.1);}
+.g-modal-section {
+    margin:10px !important;
+    margin-top: 0 !important;
+}
+.modal__content .sc-button-selected:hover {
+    
+}
+.modal__content .sc-button-selected {
+    box-shadow: 1px 1px 1px 1px;
+    filter: brightness(1);
+}
+
+.trackItem__additional {background: none !important;}
+
+.trackItem.active {
+    background-color: rgba(170,170,170,0.3) !important; 
+}
+
+.trackItem.hover {
+    background-color: rgba(170,170,170,0.3);
+    transition: all 0.3s ease;
+}
+
+/* border fixes */
+
+.sc-border-light-right {
+    border-right: none;
+}
+.sc-classic .g-tabs {
+    border-bottom: none;
+}
+
+.sc-classic .listenEngagement {
+    border: none;
+    box-shadow: none;
+}
+
+/* comment fix */
+
+.sc-classic .commentForm.m-large .commentForm__avatar {
+    left: -15px;
+}
+
+.sc-classic .commentForm__input {
+    border: 1px solid darkgray;
+}
+
+#content > div > div.l-listen-wrapper > div.l-about-main > div > div:nth-child(1) > div > div > div.listenEngagement__commentForm > div > div.commentForm__wrapper.commentForm__transition > div.commentForm__avatar > span {
+    width: 50px !important;
+    height: 50px !important;
+}
+}
+
+@-moz-document domain("soundcloud.com") {
+/* Profile */
+
+
+.profileHeaderBackground__visual {
+	background-size: cover;
+	background-position: center;
+}
+
+.profileHeaderBackground.m-visualLoaded .profileHeaderBackground__visual {
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	filter: blur(0px);
+    opacity: 1;
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, 
+    from(rgba(0,0,0,0.3)), to(rgba(0,0,0,1)));
+    -moz-mask-image: -webkit-gradient(linear, left bottom, left top, 
+    from(rgba(0,0,0,0.3)), to(rgba(0,0,0,1)));
+}
+
+.profileHeader {
+	height: 480px;
+}
+
+.profileHeader__info {
+	position: absolute;
+	z-index: 1;
+	bottom: 0px;
+	bottom: 40px;
+	left: 30px;
+	width: 900px;
+}
+
+.profileHeaderInfo__content {
+	bottom: 0px;
+	left: 240px;
+	width: 100%;
+	position: absolute;
+}
+
+.profileHeaderInfo__userName {
+	font-size: 32px;
+	line-height: 37px;
+	padding: 9px 9px;
+}
+
+.profileHeaderBackground {
+	background: #282F33;
+}
+
+.profileMenu__link:hover {
+    background: #282F33;
+}
+
+.featuredProfiles {
+    background-color: rgba(40, 47, 51, 0.7);
+    border-radius: 4px;
+    height: 480px !important;
+    -webkit-transform: translateY(440px);
+    transform: translateY(440px);
+    transition: transform .5s ease;
+}
+
+.featuredProfiles:hover {
+    border-radius: 0px;
+}
+
+.featuredProfiles__wrapper {
+	height: 480px !important;
+}
+
+.g-type-shrinkwrap-inline, .g-type-shrinkwrap-inline:hover, .g-type-shrinkwrap-inline:visited, .g-type-shrinkwrap-block, .g-type-shrinkwrap-block:hover, .g-type-shrinkwrap-block:visited {
+    position: relative;
+    background-color: transparent;
+    border-radius: 4px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+.searchMenu__searchFor.g-dark-selected {
+    background-color: #282F33;
+}
+.searchMenu__searchFor {
+    padding: 0;
+    background-color: #282F33;
+    border-bottom: 0px solid rgba(0,0,0,0);
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    text-align: left;
+    box-shadow: 0 0px 0 rgba(255,255,255,.05);
+    width: auto;
+    height: 0px;
+    opacity: 0;
+}
+.g-dark-list>li>a:hover, .g-dark-list>li>a:focus, .g-dark-selected {
+    background: #282F33;
+    width: auto;
+    color: #fff;
+}
+.searchAutocomplete>.loading {
+    background-color: transparent;
+    padding: 5px 0;
+}
+
+.autocompleteItem {
+    padding: 0;
+    width: auto;
+}
+.g-dark-list {
+    background-color: #111;
+    width: auto;
+}
+
+/* DROP DOWN */
+
+.dropdownContent__container {
+    background-color: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(5px);
+    
+}
+.headerMenu__link {
+    border-top: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,0);
+}
+.headerMenu__link:hover {
+    background-color: rgba(51,51,51,0.3) !important;
+   /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+}
+
+
+.sc-classic .moreActions {
+    background-color: rgba(255,255,255,0.6);
+    border: none !important;
+}
+.moreActions__group button {
+    background-color: rgba(255,255,255,0.6) !important;
+}
+.moreActions__group button:hover {background-color: rgba(51,51,51,0.3) !important;}
+
+
+.dropdownContent__listItem {border: none;}
+
+.moreActions__link {border:none;}
+
+.moreActions {
+    border: 1px solid #ccc;
+    background: none;
+}
+
+.moreActions__button {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+}
+.moreActions__button:not(:disabled), .moreActions__link {background-color: rgba(255, 255, 255, 0.6)}
+.moreActions__button:not(:last-child), .moreActions__link {border: none !important;}
+.moreActions__button:focus:not(:disabled), .moreActions__button:hover:not(:disabled), .moreActions__link:hover {
+    background-color: rgba(40, 47, 51, 0.3);
+    transition: all 0.3s ease;
+}
+
+.l-fixed-top-one-column>.l-top {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border: none;
+    width: 100%;
+    color: white !important;
+}
+.notificationBadge__linkContainer {transition: all 0.3s ease;}
+.notificationBadge__linkContainer:hover {
+    background-color: rgba(51,51,51,0.3);
+    transition: all 0.3s ease;
+}
+.notificationBadge__side .sc-button-follow {
+    filter: drop-shadow(0 0 0.6rem black);
+    
+}
+
+.sc-label-private {
+    filter: grayscale(1);
+}
+}
+
+@-moz-document domain("soundcloud.com") {
+/* OPTIONAL TWEAKS */
+
+/* CUSTOM COLOURS */
+
+.sc-classic .header__logo {
+    background: white !important; /* Logo background in the top left of SoundCloud */
+    transition: all 0.2s ease;
+    border-bottom-right-radius: 5%;
+}
+
+.sc-classic .header__logo:hover {
+    background: #f70 !important; /* Change this too for on hover */
+}
+.header__navMenu>li>a:hover {
+    background-color: #f70;
+}
+
+/* NAVIGATION COLOUR*/
+
+.sc-classic .header {background-color:rgba(33,41,46,1);}
+
+/*HIDE SIDEBAR */
+
+/*
+.l-fluid-fixed .l-sidebar-right {display: none;}
+.l-fluid-fixed .l-main {margin-right: 0;}
+*/
+
+/* WAVEFORM COLOUR CHANGE */
+
+/* For the waveform colour change to work, remove the line below */
+.waveform__layer, .waveform__layer .sceneLayer {filter: grayscale(35%);}
+
+/*
+.sceneLayer, .sc-button-play, .playbackTimeline, .heroPlayButton {filter: hue-rotate(270deg);}
+.waveformCommentsNode {filter: hue-rotate(270deg);}
+*/
+
+/* CUSTOM OPTION PRESETS */
+/*  
+    ELLIE 
+    #1c633f;
+    (135deg) brightness(0.6);}
+
+    HARRISON 
+    #e0f;
+*/
+
+/* remove profile menu records */
+.profileMenu .profileMenu__premium {display: none;} /* try pro */
+.profileMenu .profileMenu__friends {display:none;}  /* who to follow */
+/* .profileMenu .profileMenu__stations {display:none;} */ /*    stations   */ 
+.profileMenu .profileMenu__distribute {display:none;} /* distribute */
+.profileMenu .profileMenu__trackManager {display:none;} /* tracks */
+.headerMenu__list {border-bottom: none;} /* ignore */
+
+/* remove BURGER menu records */
+
+.moreMenu ul:first-child {display:none;} /* Copyrights, Legal & About Us */
+.headerMenu__list:nth-child(2) {display: none;} /* Get Soundcloud Go, Mobile Apps, For creators, Blogs, Jobs, Developers */
+
+/* Follow back button removal (for likes page) */
+.playableTile__actionWrapper .sc-button-follow {display: none !important;}
+
+
+/* COLOURS */
+
+/* background: -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.8)), to(rgba(40,47,51,1))); */
+
+/* IMAGE SIZE ON HIGH RESOLUTIONS (1440P+) */
+
+.sc-classic .badgeList__item {
+    width: 14.25%; /* 1440P */
+}
+
+.tileGallery.m-fourPanels .tileGallery__sliderPanelSlide {
+    flex-basis: 20%;
+}
+
+/* Playliat Banner (The upload, etc) */
+
+.selectionPlaylistBanner, .g-scrollable-inner {
+    height: 300px !important;
+}
+
+/* Player colours */
+/* progress bar */
+.sc-classic .playbackTimeline__progressBar, .sc-classic .playbackTimeline__progressHandle {
+    background: rgba(33, 41, 46, 0.8);
+}
+.sc-classic .playbackTimeline__timePassed {
+    color: rgba(33, 41, 46, 1);
+}
+/* volume slider */
+.sc-classic .volume__sliderProgress, .sc-classic .volume__sliderHandle {
+    background: rgba(33, 41, 46, 0.8); 
+}
+}
+
+@-moz-document domain("soundcloud.com") {
+/* NOW PLAYING ANIMATION (EXPERIMENTAL) */
+/* TURN ON BY CHANGING APPLIES TO: URLS ON THE DOMAIN */
+
+/* ORIGINAL VERSION */
+
+/*
+
+.m-playing .playableTile__artwork  {
+    box-sizing: border-box;
+}
+
+.m-playing .playableTile__artwork .playableTile__image {
+    box-sizing: border-box;
+    border: 5px solid gray;
+    transition: border 0.2s linear;
+    border-image: url(https://c.tenor.com/agFP33l54LEAAAAC/sziv%C3%A1rv%C3%A1ny-h%C3%A1tt%C3%A9r-rainbow-background.gif) 1; 
+}
+
+*/
+
+/* CUSTOM BORDER ANIMATIONS (FOR ORIGINAL) */
+
+/*
+Rotating rainbow (default): https://c.tenor.com/agFP33l54LEAAAAC/sziv%C3%A1rv%C3%A1ny-h%C3%A1tt%C3%A9r-rainbow-background.gif
+Solid rainbow: https://i.stack.imgur.com/poux8.gif
+*/
+
+/* FLASHY NEW VERSION */
+
+.m-playing .playableTile__artwork .playableTile__image:before, .m-playing .playableTile__artwork .playableTile__image:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+  background-size: 250%;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  z-index: -1;
+  animation: border-move 25s linear infinite; 
+    
+  /* V2 */  
+  border-radius: 5%;
+
+}
+
+.m-playing .playableTile__artwork .playableTile__image:after {
+  filter: blur(10px);
+}
+
+@keyframes border-move {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.trackItem.active:before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.45) 0%,
+        rgba(255, 154, 0, 0.45) 10%,
+        rgba(208, 222, 33, 0.45) 20%,
+        rgba(79, 220, 74, 0.45) 30%,
+        rgba(63, 218, 216, 0.45) 40%,
+        rgba(47, 201, 226, 0.45) 50%,
+        rgba(28, 127, 238, 0.45) 60%,
+        rgba(95, 21, 242, 0.45) 70%,
+        rgba(186, 12, 248, 0.45) 80%,
+        rgba(251, 7, 217, 0.45) 90%,
+        rgba(255, 0, 0, 0.45) 100%
+    );
+  background-size: 250%;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  z-index: -1;
+  animation: border-move 25s linear infinite; 
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+.trackItem.active .trackItem__trackTitle, .trackItem.active .trackItem__username, .trackItem.active .trackItem__numberWrapper {
+    color: white !important;
+    text-shadow: rgb(0, 0, 0) 0px 0px 6px;
+    letter-spacing: 0.3px;
+    transition: all 150ms ease;
+}
+
+.trackItem .sc-button-small {
+    background-color: rgba(255,255,255, 0.6);
+    border-radius: 10px;
+    transform: scale(1.1);
+    
+}
+}
+
+@-moz-document domain("soundcloud.com") {
+/* Maintenence (stop changing ur classes soundcloud) */
+
+.l-container {
+    width: auto !important;
+    
+}
+
+.sc-classic .headerMenu.m-light {
+    background-color:rgba(255,255,255, 0.7);
+    border: none;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+}
+
+.sc-classic .dropdownContent__container {
+    background-color:rgba(255,255,255, 0.8);
+    border:none;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+}
+.sc-classic .headerMenu__list {border-bottom: none;}
+.sc-classic .dropdownContent__listItem {border:none;}
+.sc-classic .header__navMenu>li>a {border-right: none;}
+
+.l-nav a {    
+    font-family: 'airbnb cereal app medium', sans-serif !important;
+}
+.header__navMenu>li>a {transition: all 0.2s ease;}
+.header__navMenu>li>a:hover {
+    color: black !important;
+    transition: all 0.4s ease;
+}
+.sc-classic .g-type-shrinkwrap-block, .sc-classic .g-type-shrinkwrap-block:hover, .sc-classic .g-type-shrinkwrap-block:visited, .sc-classic .g-type-shrinkwrap-inline, .sc-classic .g-type-shrinkwrap-inline:hover, .sc-classic .g-type-shrinkwrap-inline:visited {background:none;}
+
+
+.header__logoLink {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAQAAAAs/tcnAAABMUlEQVR4Ac3UJfQUARTGUaxnrBHpPeDu7u7uTg/QO/SK9q1U3KHg2i7fH4exNeSdc9/ZNL/RHfRfjdHOuOajt246b7Fh/T38WO/9OnfM7s+hx3gUh5XNWYN7D4wnTlOe6OGsv/6eQlQFmNX9WScTs4jqwD3DOr/j04gJxHyiOsCiTgITibnEdGIJURc410lgJrGYmE+sIuoCz1301BstGwxueqQLiVXEMmI9cVp7c9WIYmAqkUysIjYQa4mtRAJtJwb//kgXEdOJTcR2Yiuxi2g/wIYfgTnEBmIFsYvYS+whDhCdBFo/ApuJvcRO4hBxhDhMHCU6Cbz5EThKHCe+7BNEcXceKFxB/e7yFs0h1hP1u/OHXHiL6nfnr2nhO6jfR3r50L5cR9O+oX5+/FX8vfkElmh0Xu+KRLEAAAAASUVORK5CYII=) !important;
+    filter: invert(100%);
+}
+}
+
+@-moz-document domain("soundcloud.com") {
+/* CEREAL V2 */
+
+/* Play tiles / likes page */
+
+.playableTile__descriptionContainer .playableTile__mainHeading {
+    margin-top: 10px;
+}
+.playableTile__image span {
+    border-radius: 5%;
+}
+.playableTile__image .image__lightOutline {
+    border-radius: 5%;
+}
+.sc-classic .playableTile__actions {
+    border-radius: 17px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    filter: drop-shadow(0px 1px 0px rgba(0,0,0,0.5));
+}
+
+.sc-classic .playButton.m-stretch.sc-button-pause:before { 
+    opacity: 0.8
+}
+
+.playButton.m-stretch {
+        backdrop-filter: blur(3px);
+    }
+
+.sc-classic .playableTile__mainHeadingLike.sc-icon-like {
+    margin-top: 1px;
+}
+
+/* Player */
+
+.playControls {
+    padding-bottom: 20px;
+}
+.playControls__bg:after {
+    background: rgba(242, 241, 242, 0.95);
+    backdrop-filter: blur(5px);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49px;
+    left: 0px;
+    right: 0px;
+    bottom: -100%;
+}
+
+.sc-classic .playControls__bg, .sc-classic .playControls__inner {
+    border-top: none;
+    
+    background: rgba(242, 241, 242, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.sc-classic .playbackTimeline__progressHandle {
+    border: none;
+    margin-top: -3px;
+}
+
+.sc-classic .playbackTimeline__progressBar {
+    height: 2px;
+}
+
+.sc-classic .volume__sliderHandle {
+    margin-left: 9px;
+}
+
+/* Inputs */
+
+.sc-classic .listDisplayToggle__title {
+    font-family: 'Rubik' !important;
+}
+
+.collectionSection__subHeading {
+    letter-spacing: 0.5px;
+    color: rgb(51,51,51);
+}
+
+.textfield__input {
+    background-color: rgba(231,231,231, 0.8);
+    padding-left: 10px;
+    border-radius: 20px;
+    
+    border: none;
+}
+.textfield__input input {
+    padding-left: 10px;
+}
+
+/* playlist */
+
+.createPlaylistSounds .sc-border-light-bottom {
+    border-bottom: 1px solid rgba(40, 47, 51, 0.7);
+}
+.createPlaylistSounds {border-color: rgba(40, 47, 51, 0.7) !important;}
+
+.createPlaylistSounds__listContainer .compactTrackListItem  {
+    padding: 10px !important;
+}
+.compactTrackListItem__image .sc-artwork {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.compactTrackListItem .compactTrackListItem__content {
+    margin-top: 3px;
+    font-size: 15px;
+}
+.sc-classic .g-button-remove-compact {
+    width: 25px;
+    height: 25px;
+}
+.sc-classic .compactTrackListItem__remove {
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0);
+        
+}
+.sc-classic .compactTrackListItem__remove:hover {
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: all 0.5s ease;
+}
+.sc-classic .createPlaylistSuggestion__add {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-family: 'Arial Nova', sans-serif; 
+    border: 1px solid !important;
+    border-color: rgba(0,0,0,0) !important;
+    font-size: 14px;
+    height: 30px;
+    
+    transition: all 0.4s ease-out;
+    
+    border-radius: 20px;
+}
+.sc-classic .createPlaylistSuggestion__add:hover {
+    border-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(170,170,170,0.2) !important;
+    transition: all 0.2s ease-in;
+}
+
+.sc-classic .trackItem.hover {
+    margin: none;
+}
+.sc-button-small.sc-button-active.sc-button-more:before, .sc-button-small.sc-button-selected.sc-button-more:before {
+    filter: grayscale(1);
+}
+
+/* header */
+
+/* .sc-classic .header {padding-top: 10px;} */
+
+.header__left {
+    font-family: 'Rubik' !important;
+}
+
+.header__navMenu .header__navMenuItem {
+    border-radius: 20px;
+    border-top: 8px solid #21292e;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.sc-classic .header>li>a:focus, .sc-classic .header__navMenu>li>a.selected {
+    background-color: rgba(231,231,231, 0.4);
+    font-weight: bolder;
+}
+.header__navMenu .header__navMenuItem:hover {
+    /* consider this for optional */
+}
+.sc-classic .headerSearch {
+    margin-top: 5px;
+}
+.g-dark input[type="search"] {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.g-dark input[type="search"]:focus {
+    color: #fff;
+/*     background: #282F33; */
+    background: rgba(231,231,231,0.3);
+}
+.dropdownContent__footerLink {
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+.dropdownContent__footerLink:hover {
+    background-color: rgba(231,231,231,0.8);
+    filter: drop-shadow(1px 0px 0px black)
+}
+.sc-classic .g-tabs-link:hover {
+    transition: all 0.3s ease;
+}
+
+/* songs */
+
+.sc-classic .commentForm.m-large .commentForm__input {
+    font-size: 16px;
+    border: 1px solid rgba(231,231,231,1);
+    border-radius: 20px;
+}
+
+.commentItem__controls .sc-button  {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-family: 'Arial Nova', sans-serif; 
+    border: 1px solid !important;
+    border-color: rgba(0,0,0,0) !important;
+    
+    transition: all 0.4s ease-out;
+    
+    border-radius: 20px;
+    margin-top:2px;
+    
+}
+.commentItem__controls .sc-button:hover {
+    border-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(170,170,170,0.2) !important;
+    transition: all 0.2s ease-in;
+}
+.commentItem__read {
+    padding: 2px;
+    padding-right: 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.commentItem__read:hover {
+    background-color: rgba(231,231,231, 1);
+}
+
+.listenEngagement__actions .sc-button-group .sc-button-selected {
+    background-color: rgba(170,170,170,0.4) !important;
+/*     background-color: rgba(231,231,231,0.2) !important; */
+    transition: all 0.2s ease-in;
+}
+
+.listenEngagement__actions  .sc-button-group .sc-button-active {
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* fix for profile page */
+
+
+/* specific element fixes */
+/* edit photo button */
+#overlay_5009 > div > div > div > div > div.sc-media.sc-mt-2x > div.profileSettings__avatar.sc-media-image.sc-mr-4x > div > div.editImage__select > button:hover {background-color: rgba(170,170,170,0.8) !important;}
+.uploadButton > span {
+    padding-bottom: 5px;
+    margin-right: 10px;
+    border-bottom: 1px solid;
+    border-color: rgba(255,255,255,0);
+    transition: all 0.2s ease;
+    
+}
+.uploadButton:hover > span {
+    border-color: rgba(255,255,255,1);
+}
+
+.profileSettings__formButtons .sc-button {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-family: 'Arial Nova', sans-serif; 
+    border: 1px solid !important;
+    border-color: rgba(0,0,0,0) !important;
+    font-size: 14px;
+    height: 30px;
+    
+    transition: all 0.4s ease-out;
+    
+    border-radius: 20px;
+}
+.profileSettings__formButtons .sc-button:hover {
+    border-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(170,170,170,0.2) !important;
+    transition: all 0.2s ease-in;
+} 
+.sidebarHeader .sidebarHeader__more {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    padding: 5px 8px 5px 8px;
+    font-family: 'Arial Nova', sans-serif; 
+    border: 1px solid !important;
+    border-color: rgba(0,0,0,0) !important;
+    font-size: 14px;
+    
+    transition: all 0.4s ease-out;
+    
+    border-radius: 20px;
+}
+.sidebarHeader .sidebarHeader__more:hover {
+    border-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(170,170,170,0.2) !important;
+    transition: all 0.2s ease-in;
+}
+
+.userStreamItem .commentForm__inputWrapper .commentForm__input {
+    border-radius: 50px !important;
+}
+.sc-classic .commentForm.m-small .commentForm__input:hover, .sc-classic .commentForm.m-small .commentForm__input:focus  {
+    background-color: rgba(231,231,231,0.8);
+}
+.sc-classic .commentForm.m-small .commentForm__input {
+    border-left: 1px solid darkgray;
+    padding-left: 50px;
+    
+    transition: all 0.3s ease;
+}
+.userStreamItem .commentForm__avatar span {
+    z-index: 100;
+    position: absolute;
+    left: 28px;
+    top: 6px;
+    
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 100%;
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.8));
+}
+
+.userStreamItem .soundActions .sc-button-group .sc-button {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-family: 'Arial Nova', sans-serif; 
+    border: 1px solid !important;
+    border-color: rgba(0,0,0,0) !important;
+    font-size: 14px;
+    height: 30px;
+    
+    transition: all 0.3s ease-out;
+    
+    border-radius: 20px;
+}
+.userStreamItem .soundActions .sc-button-group .sc-button:hover {
+    border-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(170,170,170,0.2) !important;
+    transition: all 0.2s ease-in;
+}
+.soundTitle__playButton .sc-button {
+    transition: all 0.2s ease-in;
+    background-color: rgba(31, 31, 31, 0.3) !important;
+    border: 2px solid transparent !important;
+}
+.soundTitle__playButton .sc-button:hover {
+    background-color: rgba(31, 31, 31, 0.7) !important;
+/*     filter: drop-shadow(2px 4px 6px black); */
+    border-color: white !important;
+}
+
+}
